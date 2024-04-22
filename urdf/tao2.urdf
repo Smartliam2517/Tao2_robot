@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tao2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.195764665341416 1.14427481671617E-06 0.181299901878542"
+        rpy="0 0 0" />
+      <mass
+        value="13.9521376615927" />
+      <inertia
+        ixx="0.131508689175548"
+        ixy="1.60524396454868E-06"
+        ixz="-1.23031423689432E-06"
+        iyy="0.350788375809972"
+        iyz="-9.94450449022834E-07"
+        izz="0.420389045390095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tao2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tao2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-1.56200211450662E-15 0.0169999999999999 -1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.259463292028807" />
+      <inertia
+        ixx="0.000215299348111058"
+        ixy="1.0871251969711E-18"
+        ixz="-8.1167097606765E-21"
+        iyy="0.000371599078458548"
+        iyz="1.22059813221133E-20"
+        izz="0.000215299348111058" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tao2/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tao2/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.2485 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="3.19322828505111E-17 -0.017000000000002 -4.85722573273506E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.259463292028807" />
+      <inertia
+        ixx="0.000215299348111058"
+        ixy="7.62268896313193E-21"
+        ixz="2.32394991366551E-21"
+        iyy="0.000371599078458548"
+        iyz="-1.48781663434215E-20"
+        izz="0.000215299348111058" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tao2/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tao2/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.2485 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="laser">
+    <inertial>
+      <origin
+        xyz="-0.00110946393439415 -0.00117495870639947 0.0203503986680949"
+        rpy="0 0 0" />
+      <mass
+        value="0.0435445894379235" />
+      <inertia
+        ixx="1.64364930505945E-05"
+        ixy="7.05967993614006E-07"
+        ixz="1.08612793553912E-07"
+        iyy="1.44289087320666E-05"
+        iyz="5.40971671313774E-08"
+        izz="2.93886055160877E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tao2/meshes/laser.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tao2/meshes/laser.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser"
+    type="fixed">
+    <origin
+      xyz="0.695 0 0.4052"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
